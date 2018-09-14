@@ -5,3 +5,4 @@ Capacitación: Git, bash y docker
 Integrantes:
 - Rafael Montoya
 - Daniela Tizón
+- Sol
