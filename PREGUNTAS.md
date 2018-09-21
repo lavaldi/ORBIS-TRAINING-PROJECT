@@ -52,3 +52,34 @@ COMANDO PARA EJECUTAR EL CONTENEDOR
 ```
 docker run -it --rm dtizonportilla/orbis-training-docker:0.2.0 bash
 ```
+
+1. ¿Cuál es la diferencia entre una imagen y un contenedor?
+- Una imagen es como una plantilla y el contenedor es la instancia de esa plantilla.
+
+2. ¿Cómo listo las imágenes que hay en mi computadora?
+- Con el comando `docker images`
+
+3. ¿Cómo salgo de un contenedor de docker?
+- Con `Ctrl-C`
+
+4. ¿Se elimina el contenedor al salir de ella?
+- Si le pones los flags `--rm` sí se eliminar, pero sino no.
+
+5. ¿Cómo elimino un contenedor?
+- Con el comando `docker rm <NAME O CONTAINER ID>`
+
+6. ¿Para qué es necesario el flag `-i`, `-t`, `--rm`?
+- `-i` es para que los comandos que ingresemos en nuestra terminal se ejecuten en la terminal de docker.
+- `-t` es para que podamos ver los logs de la terminal de docker.
+- `--rm` es para eliminar el contenedor apenas se sale de él.
+
+7. ¿Cómo verifico que el archivo creado se encuentra en la imagen?
+- Con los siguientes comandos:
+```
+docker run -it --rm dtizonportilla/orbis-training-docker:0.2.0 bash
+# cd app
+# ls
+```
+
+8. ¿Cómo se comenta una linea de código en Dockerfile?
+- Se comenta agregando un hash `#` al inicio de la línea.
