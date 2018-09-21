@@ -1,0 +1,7 @@
+version: '2'
+services:
+  nginx:
+    image: dtizonportilla/orbis-training-docker:1.0.0
+    build: .
+    ports:
+      - 1080:80
