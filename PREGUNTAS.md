@@ -83,3 +83,15 @@ docker run -it --rm dtizonportilla/orbis-training-docker:0.2.0 bash
 
 8. ¿Cómo se comenta una linea de código en Dockerfile?
 - Se comenta agregando un hash `#` al inicio de la línea.
+
+1. ¿Qué es NGINX?
+- Un servidor web. 
+
+2. ¿Cómo expongo puertos en docker?
+- Se expone con `EXPOSE` en el Dockerfile.
+
+3. ¿Cómo especifico los puertos al levantar un contenedor (docker run)?
+- Con `-p <puerto local>:<puerto expuesto en el contenedor>` 
+
+4. ¿Cómo hago 'forward' al levantar un contenedor (docker run)?
+- Con `-p`
