@@ -36,3 +36,14 @@ Integrantes:
 - Se le agrega el tag latest 
 
 happy :whale:
+
+¿Porqué es necesario crear un contenedor con esta bandera -it ? ¿Qué pasa si no le pongo -it?
+- `-i` es para que los comandos que ingresemos en nuestra terminal se ejecuten en la terminal de docker.
+- `-t` es para que podamos ver los logs de la terminal de docker.
+
+¿Para qué sirve ejecutar el comando bash al ejecutar una imagen?
+- Para poder ejecutar comandos en el contenedor.
+
+ ¿Cuál es la diferencia entre docker ps y docker ps -a?
+ - `docker ps` muestra todos los contenedores que están corriendo.
+ - `docker ps -a` muestra todos los contenedores.
