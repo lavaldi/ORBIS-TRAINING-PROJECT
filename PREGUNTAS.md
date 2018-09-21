@@ -47,3 +47,8 @@ happy :whale:
  ¿Cuál es la diferencia entre docker ps y docker ps -a?
  - `docker ps` muestra todos los contenedores que están corriendo.
  - `docker ps -a` muestra todos los contenedores.
+
+COMANDO PARA EJECUTAR EL CONTENEDOR
+```
+docker run -it --rm dtizonportilla/orbis-training-docker:0.2.0 bash
+```
