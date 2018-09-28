@@ -95,73 +95,87 @@ docker run -it --rm dtizonportilla/orbis-training-docker:0.2.0 bash
 4. ¿Cómo hago 'forward' al levantar un contenedor (docker run)?
 - Con `-p`
 
-# PASO 7
+# PARTE 7
 - ¿Qué pasa si no especifico el directorio de trabajo?
   El comando se ejecuta en el directorio raíz del container.
 
-  1. ¿Es necesario especificar el `workdir` en docker?, ¿Porqué?
-  Si es que no se quiere ejecutar los comandos el el directorio raíz, sí.
+1. ¿Es necesario especificar el `workdir` en docker?, ¿Porqué?
+Si es que no se quiere ejecutar los comandos el el directorio raíz, sí.
 
-  2. ¿Que hacen los siguientes comandos?
-  -`docker ps`
-    Muestra todos los contenedores que estan levantados.
+2. ¿Que hacen los siguientes comandos?
+-`docker ps`
+  Muestra todos los contenedores que estan levantados.
 
-  -`docker pull`
-    Descarga la imagen o un repositorio de un registro. Especificar la imagen debe.
+-`docker pull`
+  Descarga la imagen o un repositorio de un registro. Especificar la imagen debe.
 
-  -`docker push`
-    Sube una imagen a un respositorio.
+-`docker push`
+  Sube una imagen a un respositorio.
 
-  -`docker rm`
-    Borra un contenedor especificado.
+-`docker rm`
+  Borra un contenedor especificado.
 
-  -`docker rmi`
-    Borra la imagen especificada.
+-`docker rmi`
+  Borra la imagen especificada.
 
-  -`docker run`
-    Levanta un contenedor, basado en una imagen.
+-`docker run`
+  Levanta un contenedor, basado en una imagen.
 
-  -`docker tag`
-    Crea un tag a la imagen.
+-`docker tag`
+  Crea un tag a la imagen.
 
-  -`docker search`
-    Busca imágenes en docker hub.
+-`docker search`
+  Busca imágenes en docker hub.
 
-  -`docker login`
-    Permite loguearse a docker hub.
+-`docker login`
+  Permite loguearse a docker hub.
 
-  -`docker exec`
-    Permite ejecutar comandos en un contenedor que ya está levantado.
+-`docker exec`
+  Permite ejecutar comandos en un contenedor que ya está levantado.
 
-  -`docker build`
-    Construye la imagen.
+-`docker build`
+  Construye la imagen.
 
-  -`docker inspect`
-    Muestra información sobre el contenedor especificado.
+-`docker inspect`
+  Muestra información sobre el contenedor especificado.
 
-  -`docker network`
-    Permite administrar la red. Conectar, desconectar, crear, inspeccionar, listar...
+-`docker network`
+  Permite administrar la red. Conectar, desconectar, crear, inspeccionar, listar...
   
-  1. ¿Qué es bash? ¿Qué significa?
-  -  Es un programa informático, cuya función consiste en interpretar órdenes, y un lenguaje de consola.
+# PARTE 8
 
-  2. ¿Cómo ejecuto un archivo bash?
-  - . < archivo > / bash < archivo > 
+1. ¿Qué es bash? ¿Qué significa?
+-  Es un programa informático, cuya función consiste en interpretar órdenes, y un lenguaje de consola.
 
-  3. ¿Qué pasa si no especifico en un `.sh`, la linea `#!/bin/bash`?
-  - Es una convención de Unix. Si no está, el archivo SOLO se ejecuta con bash / zsh o cualquiera sea tu shell.
+2. ¿Cómo ejecuto un archivo bash?
+- . < archivo > / bash < archivo > 
 
-  4. ¿Se puede cambiar el modo bash (`/bin/bash`) a otro tipo de ejecución?
-  - Sí! Lee arriba.
+3. ¿Qué pasa si no especifico en un `.sh`, la linea `#!/bin/bash`?
+- Es una convención de Unix. Si no está, el archivo SOLO se ejecuta con bash / zsh o cualquiera sea tu shell.
 
-  5. ¿Cómo se envía variables de entorno por Docker CLI y docker-compose?
-  Docker CLI:
+4. ¿Se puede cambiar el modo bash (`/bin/bash`) a otro tipo de ejecución?
+- Sí! Lee arriba.
+
+5. ¿Cómo se envía variables de entorno por Docker CLI y docker-compose?
+
+Docker CLI:
+```
+-e NAME='Harry Potter'
+```
+docker-compose:
   ```
-    -e NAME='Harry Potter'
-  ```
-  docker-compose:
-    ```
-    service:
-      environment:
-        - DEBUG=1
-  ```
+  service:
+    environment:
+      - DEBUG=1
+```
+
+# PARTE 9
+
+  1. Qué sucede si le quito el @ al target resources del Makefile?
+  - Se ejecuta y se imprime el comando
+
+  2. ¿Para qué sirve el archivo `Makefile`?
+  Para ejecutar archivos, o comandos.
+
+  3. ¿Qué es un `target` en `Makefile`?
+  - Generalmente es un archivo generado por un programa. También puede ser un comando para ejecutar ua tarea.
