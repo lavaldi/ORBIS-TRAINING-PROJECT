@@ -5,6 +5,7 @@ services:
     build: .
     ports:
       - 3030:1042
+      - 35729:35729
     command: npm start
     volumes: 
       - $PWD:/app

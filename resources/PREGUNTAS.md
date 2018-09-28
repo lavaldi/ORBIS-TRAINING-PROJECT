@@ -5,6 +5,10 @@ Capacitación: Git, bash y docker
 Integrantes:
 - Rafael Montoya
 - Daniela Tizón
+- Claudia Valdivieso
+
+---
+
 
 1. ¿Qué importancia tiene los tags en un proyecto?
   - Para el versionamiento de mi código :D
@@ -16,11 +20,13 @@ Integrantes:
   - Con el comando `git push --tags`
 
 4. ¿Es necesario loguearse cada vez que subo una imagen a dockerhub?
-- Ño.
+  - No.
 
 5. ¿Qué es y para qué sirve docker?
-- Docker es una plataforma Open Source para desarrollar, implementar y ejecutar aplicaciones dentro de contenedores.
-- Sirve para empaquetar ambientes de desarrollo.
+  - Docker es una plataforma Open Source para desarrollar, implementar y ejecutar aplicaciones dentro de contenedores.
+  - Sirve para empaquetar ambientes de desarrollo.
+
+---
 
 6. ¿Cuál es la diferencia entre docker y VirtualBox?
 - Docker me permite crear contenedores para tus app trabajando desde el kernel <3 y VirtualBOx crea una maquina virtual con hardware designado para cada app :/
@@ -35,6 +41,8 @@ Integrantes:
 - Se le agrega el tag latest 
 
 happy :whale:
+
+---
 
 ¿Porqué es necesario crear un contenedor con esta bandera -it ? ¿Qué pasa si no le pongo -it?
 - `-i` es para que los comandos que ingresemos en nuestra terminal se ejecuten en la terminal de docker.
@@ -51,6 +59,9 @@ COMANDO PARA EJECUTAR EL CONTENEDOR
 ```
 docker run -it --rm dtizonportilla/orbis-training-docker:0.2.0 bash
 ```
+
+---
+
 
 1. ¿Cuál es la diferencia entre una imagen y un contenedor?
 - Una imagen es como una plantilla y el contenedor es la instancia de esa plantilla.
@@ -71,6 +82,8 @@ docker run -it --rm dtizonportilla/orbis-training-docker:0.2.0 bash
 - `-i` es para que los comandos que ingresemos en nuestra terminal se ejecuten en la terminal de docker.
 - `-t` es para que podamos ver los logs de la terminal de docker.
 - `--rm` es para eliminar el contenedor apenas se sale de él.
+
+---
 
 7. ¿Cómo verifico que el archivo creado se encuentra en la imagen?
 - Con los siguientes comandos:
@@ -94,6 +107,9 @@ docker run -it --rm dtizonportilla/orbis-training-docker:0.2.0 bash
 
 4. ¿Cómo hago 'forward' al levantar un contenedor (docker run)?
 - Con `-p`
+
+---
+
 
 # PARTE 7
 - ¿Qué pasa si no especifico el directorio de trabajo?
@@ -124,6 +140,8 @@ Si es que no se quiere ejecutar los comandos el el directorio raíz, sí.
 -`docker tag`
   Crea un tag a la imagen.
 
+---
+
 -`docker search`
   Busca imágenes en docker hub.
 
@@ -141,7 +159,10 @@ Si es que no se quiere ejecutar los comandos el el directorio raíz, sí.
 
 -`docker network`
   Permite administrar la red. Conectar, desconectar, crear, inspeccionar, listar...
-  
+
+---
+
+
 # PARTE 8
 
 1. ¿Qué es bash? ¿Qué significa?
@@ -156,6 +177,8 @@ Si es que no se quiere ejecutar los comandos el el directorio raíz, sí.
 4. ¿Se puede cambiar el modo bash (`/bin/bash`) a otro tipo de ejecución?
 - Sí! Lee arriba.
 
+---
+
 5. ¿Cómo se envía variables de entorno por Docker CLI y docker-compose?
 
 Docker CLI:
@@ -168,6 +191,9 @@ docker-compose:
     environment:
       - DEBUG=1
 ```
+
+---
+
 
 # PARTE 9
 
