@@ -1,7 +1,10 @@
-version: '2'
+version: '3'
 services:
-  nginx:
-    image: dtizonportilla/orbis-training-docker:1.0.0
+  node:
+    image: dtizonportilla/orbis-training-docker:2.0.0
     build: .
     ports:
-      - 1080:80
+      - 3030:1042
+    command: npm start
+    volumes: 
+      - $PWD:/app
