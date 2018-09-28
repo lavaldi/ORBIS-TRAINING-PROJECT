@@ -98,3 +98,46 @@ docker run -it --rm dtizonportilla/orbis-training-docker:0.2.0 bash
 # PASO 7
 - ¿Qué pasa si no especifico el directorio de trabajo?
   El comando se ejecuta en el directorio raíz del container.
+
+  1. ¿Es necesario especificar el `workdir` en docker?, ¿Porqué?
+  Si es que no se quiere ejecutar los comandos el el directorio raíz, sí.
+
+  2. ¿Que hacen los siguientes comandos?
+  -`docker ps`
+    Muestra todos los contenedores que estan levantados.
+
+  -`docker pull`
+    Descarga la imagen o un repositorio de un registro. Especificar la imagen debe.
+
+  -`docker push`
+    Sube una imagen a un respositorio.
+
+  -`docker rm`
+    Borra un contenedor especificado.
+
+  -`docker rmi`
+    Borra la imagen especificada.
+
+  -`docker run`
+    Levanta un contenedor, basado en una imagen.
+
+  -`docker tag`
+    Crea un tag a la imagen.
+
+  -`docker search`
+    Busca imágenes en docker hub.
+
+  -`docker login`
+    Permite loguearse a docker hub.
+
+  -`docker exec`
+    Permite ejecutar comandos en un contenedor que ya está levantado.
+
+  -`docker build`
+    Construye la imagen.
+
+  -`docker inspect`
+    Muestra información sobre el contenedor especificado.
+
+  -`docker network`
+    Permite administrar la red. Conectar, desconectar, crear, inspeccionar, listar...
