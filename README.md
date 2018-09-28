@@ -42,3 +42,31 @@ docker run -it --rm -p 3030:1042 --volume $PWD:/app dtizonportilla/orbis-trainin
 ```
 docker run -it --rm -p 3030:1042 --volume $PWD:/app dtizonportilla/orbis-training-docker:2.0.0 npm run release
 ```
+
+# Conseguir network
+```
+docker inspect d1cc9c0441d5
+```
+
+# Conseguir IP del container
+ - Bajo Networks
+
+```
+docker inspect d1cc9c0441d5 | grep "IPAddress"
+```
+
+# Ejecutar comando curl
+```
+docker run --network=orbis-training-project_default -it --rm node:10.10.0-slim curl http://172.24.0.2:1042
+```
+
+# Ejecutar archivo example.sh
+```
+docker run -it --entrypoint=/app/resources/example.sh --rm  --volume $PWD:/app dtizonportilla/orbis-training-docker:2.0.0
+```
+
+# Ejecutar archivo example.sh con una variable de entorno
+```
+ docker run -it --entrypoint=/app/resources/example.sh --rm --volume $PWD:/app -e NAME='Harry Potter' dtizonportilla/orbis-training-docker:2.0.0
+ ```
+
