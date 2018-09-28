@@ -5,16 +5,15 @@ Capacitación: Git, bash y docker
 Integrantes:
 - Rafael Montoya
 - Daniela Tizón
-- Sol
 
 1. ¿Qué importancia tiene los tags en un proyecto?
-- Para el versionamiento de mi código :D
+  - Para el versionamiento de mi código :D
 
 2. ¿Cuál es la diferencia entre un tag normal y un tag anotado en git?
-- En que en el tag anotado puedes poner un mensaje 👍
+  - En que en el tag anotado puedes poner un mensaje 👍
 
 3. ¿Cómo se sube todos los tags de git que hay en mi local?
-- Con el comando `git push --tags`
+  - Con el comando `git push --tags`
 
 4. ¿Es necesario loguearse cada vez que subo una imagen a dockerhub?
 - Ño.

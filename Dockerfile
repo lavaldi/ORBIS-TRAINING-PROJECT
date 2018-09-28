@@ -4,3 +4,5 @@ RUN mkdir /app
 COPY package.json /app
 COPY resources/ /app/
 WORKDIR /app
+EXPOSE 3030
+EXPOSE 35729

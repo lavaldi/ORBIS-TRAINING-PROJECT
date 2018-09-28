@@ -32,3 +32,7 @@ docker-compose up
 ```
 docker run -it --rm --volume $PWD:/app dtizonportilla/orbis-training-docker:2.0.0 npm install
 ```
+
+# Exponer puertos
+```
+docker run -it --rm -p 3030:3030 --volume $PWD:/app dtizonportilla/orbis-training-docker:2.0.0 npm start```
