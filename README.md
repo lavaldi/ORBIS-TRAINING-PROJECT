@@ -27,3 +27,8 @@ docker-compose build
 ```
 docker-compose up
 ```
+
+# Volumear container
+```
+docker run -it --rm --volume $PWD:/app dtizonportilla/orbis-training-docker:2.0.0 npm install
+```

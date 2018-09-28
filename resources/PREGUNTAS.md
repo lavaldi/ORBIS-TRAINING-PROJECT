@@ -95,3 +95,7 @@ docker run -it --rm dtizonportilla/orbis-training-docker:0.2.0 bash
 
 4. ¿Cómo hago 'forward' al levantar un contenedor (docker run)?
 - Con `-p`
+
+# PASO 7
+- ¿Qué pasa si no especifico el directorio de trabajo?
+  El comando se ejecuta en el directorio raíz del container.
