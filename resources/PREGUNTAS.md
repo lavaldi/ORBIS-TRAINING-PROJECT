@@ -141,3 +141,27 @@ docker run -it --rm dtizonportilla/orbis-training-docker:0.2.0 bash
 
   -`docker network`
     Permite administrar la red. Conectar, desconectar, crear, inspeccionar, listar...
+  
+  1. ¿Qué es bash? ¿Qué significa?
+  -  Es un programa informático, cuya función consiste en interpretar órdenes, y un lenguaje de consola.
+
+  2. ¿Cómo ejecuto un archivo bash?
+  - . < archivo > / bash < archivo > 
+
+  3. ¿Qué pasa si no especifico en un `.sh`, la linea `#!/bin/bash`?
+  - Es una convención de Unix. Si no está, el archivo SOLO se ejecuta con bash / zsh o cualquiera sea tu shell.
+
+  4. ¿Se puede cambiar el modo bash (`/bin/bash`) a otro tipo de ejecución?
+  - Sí! Lee arriba.
+
+  5. ¿Cómo se envía variables de entorno por Docker CLI y docker-compose?
+  Docker CLI:
+  ```
+    -e NAME='Harry Potter'
+  ```
+  docker-compose:
+    ```
+    service:
+      environment:
+        - DEBUG=1
+  ```
