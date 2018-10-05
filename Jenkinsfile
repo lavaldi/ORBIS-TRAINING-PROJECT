@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'make project-workspace'
-                sh 'make docker-jenkins-install'
+                sh 'make jenkins-install'
             }
         }
         stage('test') {

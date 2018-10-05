@@ -1,7 +1,7 @@
 version: '3'
 services:
   node:
-    image: dtizonportilla/orbis-training-docker:2.0.0
+    image: lavaldi/orbis-training-docker:2.0.0
     build: .
     ports:
       - 3030:1042
@@ -12,4 +12,3 @@ services:
   test:
     image: node:10.10.0-slim
     command: curl node:1042
-  
