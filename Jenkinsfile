@@ -8,11 +8,11 @@ pipeline {
                 sh 'make jenkins-install'
             }
         }
-        stage('test') {
-            steps {
-                sh 'make jenkins-start'
-            }
-        }
+        // stage('test') {
+        //     steps {
+        //         sh 'make jenkins-start'
+        //     }
+        // }
         stage('deploy') {
             steps {
                 sh 'make release'
