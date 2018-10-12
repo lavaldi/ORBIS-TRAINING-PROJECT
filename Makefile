@@ -26,15 +26,15 @@ delete-workspace:
 	docker rm workspace
 
 project-workspace:
-	docker create -v /home/node --name workspace alpine
-	docker cp ./ workspace:/home/node/
+	docker create -v /app --name workspace alpine
+	docker cp ./ workspace:/app/
 
 jenkins-install:
-	docker run -t --rm --volumes-from workspace -w /home/node ${DOCKER_IMAGE} npm install
+	docker run -t --rm --volumes-from workspace -w /app ${DOCKER_IMAGE} npm install
 
 jenkins-start:
-	docker run -t --rm --volumes-from workspace -w /home/node ${DOCKER_IMAGE} npm start
+	docker run -t --rm --volumes-from workspace -w /app ${DOCKER_IMAGE} npm start
 
 jenkins-release:
-	docker run -t --rm --volumes-from workspace -w /home/node ${DOCKER_IMAGE} npm run release
-	docker cp workspace:/home/node/ ./
+	docker run -t --rm --volumes-from workspace -w /app ${DOCKER_IMAGE} npm run release
+	docker cp workspace:/app/ ./
