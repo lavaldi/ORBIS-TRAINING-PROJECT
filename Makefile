@@ -14,7 +14,7 @@ start:
 	docker run -it --rm -p 3030:1042 --volume ${PWD}:/app ${DOCKER_IMAGE} npm start
 
 release:
-	docker run -it --rm -p 3030:1042 --volume ${PWD}:/app ${DOCKER_IMAGE} npm run release
+	docker run -t --rm -p 3030:1042 --volume ${PWD}:/app ${DOCKER_IMAGE} npm run release
 	docker cp workspace:/home/node/ ./
 
 greet:
