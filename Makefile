@@ -27,7 +27,7 @@ project-workspace:
 	docker cp ./ workspace:/home/node/
 
 jenkins-install:
-	docker run -it --rm --volumes-from workspace -w /home/node ${DOCKER_IMAGE} npm install
+	docker run -t --rm --volumes-from workspace -w /home/node ${DOCKER_IMAGE} npm install
 
 jenkins-start:
-	docker run -it --rm --volumes-from workspace -w /home/node ${DOCKER_IMAGE} npm start
+	docker run -t --rm --volumes-from workspace -w /home/node ${DOCKER_IMAGE} npm start
