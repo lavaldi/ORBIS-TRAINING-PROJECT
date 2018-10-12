@@ -15,7 +15,7 @@ pipeline {
         // }
         stage('deploy') {
             steps {
-                sh 'make release'
+                sh 'make jenkins-release'
                 sh 'make deploy.ghpages'
             }
         }

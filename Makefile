@@ -15,7 +15,6 @@ start:
 
 release:
 	docker run -t --rm -p 3030:1042 --volume ${PWD}:/app ${DOCKER_IMAGE} npm run release
-	docker cp workspace:/home/node/ ./
 
 greet:
 	docker run -it --entrypoint=/app/resources/example.sh --rm  --volume ${PWD}:/app -e NAME=${NAME} ${DOCKER_IMAGE}
@@ -35,3 +34,7 @@ jenkins-install:
 
 jenkins-start:
 	docker run -t --rm --volumes-from workspace -w /home/node ${DOCKER_IMAGE} npm start
+
+jenkins-release:
+	docker run -t --rm --volumes-from workspace -w /home/node ${DOCKER_IMAGE} npm run release
+	docker cp workspace:/home/node/ ./
