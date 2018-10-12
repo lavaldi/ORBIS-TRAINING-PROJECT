@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
+                sh 'make delete-workspace'
                 sh 'make project-workspace'
                 sh 'make jenkins-install'
             }

@@ -23,6 +23,9 @@ greet:
 resources:
 	@echo 'Hola recursos!'
 
+delete-workspace:
+	docker rm workspace
+
 project-workspace:
 	docker create -v /home/node --name workspace alpine
 	docker cp ./ workspace:/home/node/
