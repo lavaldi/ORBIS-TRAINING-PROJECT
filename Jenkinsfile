@@ -1,5 +1,12 @@
 pipeline {
     agent any
+    parameters {
+        choice(
+            name: 'DEPLOY',
+            choices: ["gh-page","aws"],
+            description: "Ambiente de despliegue"
+        )
+    }
     stages {
         stage('build') {
             steps {

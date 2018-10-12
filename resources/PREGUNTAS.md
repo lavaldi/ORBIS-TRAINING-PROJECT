@@ -383,5 +383,33 @@ docker-compose:
 ---
 
 
-  27.  ¿Qué hace cada paso?
-```     Ejecuta su respectiva función
+27.  ¿Qué hace cada paso?
+  Ejecuta su respectiva función
+
+
+
+---
+
+
+
+# Parte 12
+
+1. Explicar lo que hace la función `get_user_name`
+  Obtiene el usuario del repositorio de git de acuerdo si el git remote es HTTPS o SSH.
+
+2. ¿Qué significa el argumento `s3`?
+  Determina el bucket de S3
+3. ¿Qué significa el argumento `--delete`?
+
+4. ¿Qué significa el argumento `--acl`?
+5. ¿Qué significa el argumento `--region`?
+6. ¿Para qué sirve el comando `aws`?
+7. Explicar lo que hace la función `deploy_bucket`
+8. Explicar lo que hace la función `show_deploy_url`
+9. ¿Qué hace cada paso?
+
+
+---
+
+
+# Parte 14
