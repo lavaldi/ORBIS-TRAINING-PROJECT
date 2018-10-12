@@ -37,4 +37,4 @@ jenkins-start:
 
 jenkins-release:
 	docker run -t --rm --volumes-from workspace -w /app ${DOCKER_IMAGE} npm run release
-	docker cp workspace:/app/ ./
+	docker cp workspace:/app/. ./
