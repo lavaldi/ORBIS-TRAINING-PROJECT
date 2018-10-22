@@ -398,15 +398,25 @@ docker-compose:
   Obtiene el usuario del repositorio de git de acuerdo si el git remote es HTTPS o SSH.
 
 2. ¿Qué significa el argumento `s3`?
-  Determina el bucket de S3
+  Indica que se lanzará un comando del servicio s3
 3. ¿Qué significa el argumento `--delete`?
-
+  Indica que los archivos que existen en el destino pero no en la fuente se eliminan durante la sincronización.
 4. ¿Qué significa el argumento `--acl`?
+   Es la lista de control de acceso para los buckets.
+
 5. ¿Qué significa el argumento `--region`?
+   Indica la región a la cual se va a deployar.
+
 6. ¿Para qué sirve el comando `aws`?
+   Es la línea de comandos para usar los servicios de AWS.
+
 7. Explicar lo que hace la función `deploy_bucket`
+   Sirve para sincronizar los archivos de la carpeta `BUILD_DIR` con el bucket en s3.
 8. Explicar lo que hace la función `show_deploy_url`
-9. ¿Qué hace cada paso?
+   Muestra el enlace donde se ha publicado nuestro proyecto.
+
+9.  ¿Qué hace cada paso?
+    Primero se llama a la función `get_user_name`, luego `deploy_bucket` y `show_deploy_url`. (la descripción de dichas funciones se encuentra en las preguntas anteriores)
 
 
 ---
