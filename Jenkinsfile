@@ -15,11 +15,12 @@ pipeline {
                 sh 'make jenkins-install'
             }
         }
-        // stage('test') {
-        //     steps {
-        //         sh 'make jenkins-start'
-        //     }
-        // }
+        stage('Test') {
+            steps {
+                sh 'make jenkins-start'
+                sh 'make curl'
+            }
+        }
         stage('deploy') {
             steps {
                 sh 'make jenkins-release'

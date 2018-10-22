@@ -34,8 +34,13 @@ jenkins-install:
 	docker run -t --rm --volumes-from workspace -w /app ${DOCKER_IMAGE} npm install
 
 jenkins-start:
-	docker run -t --rm --volumes-from workspace -w /app ${DOCKER_IMAGE} npm start
+	docker network create orbis_training_net
+	docker run -d --net=orbis_training_net --name node_jenkins_start -p 3030:1042 --volumes-from espacio_de_trabajo -w /app ${DOCKER_IMAGE} npm start
+
+curl:
+	echo "curl -> jojo"
+	docker run -t --rm --net=orbis_training_net --volumes-from espacio_de_trabajo -w /app ${DOCKER_IMAGE} curl node_jenkins_start:1042
 
 jenkins-release:
 	docker run -t --rm --volumes-from workspace -w /app ${DOCKER_IMAGE} npm run release
-	docker cp workspace:/app/deploy ./
+	docker cp workspace:/app/. ./
